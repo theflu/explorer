@@ -21,6 +21,9 @@
   // google analyitcs
   "gaid": "",
   
+  // OpenVZ CPUs core (only for openvz/lxv VMs)
+  "ovzcores": ,
+  
   // Donate address
   "donateaddress": "",
   "donatesymbol": "",
