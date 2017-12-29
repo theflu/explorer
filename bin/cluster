@@ -20,7 +20,7 @@ if (cluster.isMaster) {
       });
 
       // Count the machine's CPUs
-      if (typeof(settings.ovzcores) !== 'undefined') {
+      if (typeof(settings.ovzcores) !== 'undefined' && settings.ovzcores) {
         var cpuCount = settings.ovzcores;
       } else {
         var cpuCount = require('os').cpus().length;

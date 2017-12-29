@@ -14,16 +14,16 @@
 
   // coin symbol
   "symbol": "DRK",
-  
+
   // main site
   "mainsite": "",
-  
+
   // google analyitcs
   "gaid": "",
-  
+
   // OpenVZ CPUs core (only for openvz/lxv VMs)
-  "ovzcores": ,
-  
+  "ovzcores": "",
+
   // Donate address
   "donateaddress": "",
   "donatesymbol": "",

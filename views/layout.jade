@@ -8,7 +8,7 @@ html
     link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='icon', href='#{settings.favpng}')
-    if typeof(settings.gaid) !== 'undefined'
+    if typeof(settings.gaid) !== 'undefined' && settings.gaid
       script(src='https://www.googletagmanager.com/gtag/js?id=#{settings.gaid}')
       script.
         window.dataLayer = window.dataLayer || [];
@@ -134,7 +134,7 @@ html
                 a.navbar-link(href='/info')
                   span.glyphicon.glyphicon-info-sign
                   span.menu-text #{settings.locale.menu_api}
-			if typeof(settings.mainsite) !== 'undefined'
+			if typeof(settings.mainsite) !== 'undefined' && settings.mainsite
               li#main
 			  a.navbar-link(href='#{settings.mainsite') 
                 span.glyphicon.glyphicon-piggy-bank
@@ -225,7 +225,7 @@ html
       .col-md-4
         ul.nav
           li.text-center(style='margin-left:80px;margin-right:80px;')
-            if typeof(settings.doanteaddress) !== 'undefined' && typeof(settings.donatesymbol) !== 'undefined'
+            if typeof(settings.doanteaddress) !== 'undefined' && typeof(settings.donatesymbol) !== 'undefined' && settings.doanteaddress && settings.donatesymbol
               p.navbar-default.navbar-brand(style='margin-top:15px;color:#fff') Donate #{settings.donatesymbol}: #{settings.doanteaddress}
             else
               p(style='margin-top:15px;color:#fff') Donate BTC: 17PcKo1YxHRPHYzHid6dLG7czSbMZYNMmB
