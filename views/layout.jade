@@ -7,8 +7,8 @@ html
     link(rel='stylesheet', href='//cdn.datatables.net/plug-ins/725b2a2115b/integration/bootstrap/3/dataTables.bootstrap.css')
     link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
-	if typeof(settings.gaid) !== 'undefined'
-	  script(src='https://www.googletagmanager.com/gtag/js?id=#{settings.gaid}')
+    if typeof(settings.gaid) !== 'undefined'
+      script(src='https://www.googletagmanager.com/gtag/js?id=#{settings.gaid}')
       script.
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -219,8 +219,10 @@ html
       .col-md-4
         ul.nav
           li.text-center(style='margin-left:80px;margin-right:80px;')
-            p(style='margin-top:15px;') 
-              a.navbar-link(href='https://github.com/iquidus/explorer', target='_blank') Powered by Iquidus Explorer 
+            if typeof(settings.doanteaddress) !== 'undefined' && typeof(settings.donatesymbol) !== 'undefined'
+              p.navbar-default.navbar-brand(style='margin-top:15px;color:#fff') Donate #{settings.donatesymbol}: #{settings.doanteaddress}
+            else
+              p(style='margin-top:15px;color:#fff') Donate BTC: 17PcKo1YxHRPHYzHid6dLG7czSbMZYNMmB
       span.connections
         label#lblBlockcount.label.label-default -
         label#lblConnections.label.label-default -

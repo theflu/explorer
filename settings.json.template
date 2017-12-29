@@ -17,6 +17,10 @@
   
   // google analyitcs
   "gaid": "",
+  
+  // Donate address
+  "donateaddress": "",
+  "donatesymbol": "",
 
   // logo
   "logo": "/images/logo.png",
