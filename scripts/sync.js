@@ -95,18 +95,7 @@ function is_locked(cb) {
     var fname = './tmp/' + database + '.pid';
     fs.exists(fname, function (exists){
       if(exists) {
-        fs.readFile(fname, 'utf8', function (err,data) {
-          if (err) {
-            return cb(true);
-          }
-          
-          if (process.kill(data,0)) {
-            return cb(true);
-          }
-          
-          remove_lock(cb);
-          return cb(true);
-        });
+        return cb(true);
       } else {
         return cb(false);
       }
