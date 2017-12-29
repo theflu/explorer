@@ -99,7 +99,7 @@ function is_locked(cb) {
           if (err) {
             return cb(true);
           }
-          
+          console.log(data);
           if (process.kill(data,0)) {
             return cb(true);
           }
