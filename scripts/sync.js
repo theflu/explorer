@@ -99,13 +99,15 @@ function is_locked(cb) {
           if (err) {
             return cb(true);
           }
-          console.log(data);
-          if (process.kill(data,0)) {
-            return cb(true);
+          
+          try {
+            process.kill(data,0)
+          } catch (e) {
+            remove_lock(cb);
+            return cb(false);
           }
           
-          remove_lock(cb);
-          return cb(false);
+          return cb(true);
         });
       } else {
         return cb(false);
