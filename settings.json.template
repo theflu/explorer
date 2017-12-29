@@ -27,6 +27,7 @@
 
   // favicon
   "favicon": "public/favicon.ico",
+  "favpng": "public/favicon.ico",
 
   // Uses bootswatch themes (http://bootswatch.com/)
   // Valid options:
