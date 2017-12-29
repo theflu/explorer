@@ -33,7 +33,7 @@
 
   // favicon
   "favicon": "public/favicon.ico",
-  "favpng": "public/favicon.ico",
+  "favpng": "/images/logo.png",
 
   // Uses bootswatch themes (http://bootswatch.com/)
   // Valid options:
