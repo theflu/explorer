@@ -15,6 +15,9 @@
   // coin symbol
   "symbol": "DRK",
   
+  // main site
+  "mainsite": "",
+  
   // google analyitcs
   "gaid": "",
   
