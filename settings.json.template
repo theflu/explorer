@@ -32,7 +32,7 @@
   "theme": "Cerulean",
 
   // port to listen for requests on.
-  "port" : 3001,
+  "port" : 80,
 
   // database settings (MongoDB)
   "dbsettings": {
