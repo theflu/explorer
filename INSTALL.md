@@ -10,36 +10,6 @@ $ sudo apt-get update
 $ sudo apt-get install -y mongodb-org
 ```
 
-## Set MongoDB to auto start
-```
-$ sudo nano /etc/systemd/system/mongod.service
-```
-##### Add
-```
-[Unit]
-Description=MongoDB Database Service
-Wants=network.target
-After=network.target
-
-[Service]
-ExecStart=/usr/bin/mongod --config /etc/mongod.conf
-ExecReload=/bin/kill -HUP $MAINPID
-Restart=always
-User=mongodb
-Group=mongodb
-StandardOutput=syslog
-StandardError=syslog
-
-[Install]
-WantedBy=multi-user.target
-```
-
-```
-$ sudo systemctl daemon-reload
-$ sudo systemctl start mongod
-$ sudo systemctl enable mongod
-```
-
 ## Creating a MongoDB Database
 ```
 $ sudo mongo
@@ -66,6 +36,12 @@ $ cp ./settings.json.template ./settings.json
 ## Modify the Settings File
 ```
 $ sudo nano settings.json
+```
+
+## Install Forever to keep the js running
+```
+$ sudo npm install forever -g
+$ sudo npm install forever-monitor
 ```
 
 ## Setup CRON
