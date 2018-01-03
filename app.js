@@ -124,7 +124,6 @@ app.set('show_sent_received', settings.show_sent_received);
 app.set('logo', settings.logo);
 app.set('theme', settings.theme);
 app.set('labels', settings.labels);
-app.set('mainsite', settings.mainsite);
 app.set('gaid', settings.gaid);
 app.set('ovzcores', settings.ovzcores);
 app.set('donateaddress', settings.donateaddress);

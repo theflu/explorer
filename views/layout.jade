@@ -100,6 +100,10 @@ html
           a.navbar-brand(href='/') #{settings.title}
         .collapse.navbar-collapse(id='navbar-collapse')
           ul.nav.navbar-nav
+		    li#main
+              a.navbar-link(href='http://altexplorer.co/') 
+                span.glyphicon.glyphicon-home
+                span.menu-text Alt Explorer
             li#home
               a.navbar-link(href='/') 
                 span.glyphicon.glyphicon-search
@@ -134,11 +138,7 @@ html
                 a.navbar-link(href='/info')
                   span.glyphicon.glyphicon-info-sign
                   span.menu-text #{settings.locale.menu_api}
-            if typeof(settings.mainsite) !== 'undefined' && settings.mainsite
-              li#main
-                a.navbar-link(href='#{settings.mainsite}') 
-                  span.glyphicon.glyphicon-piggy-bank
-                  span.menu-text More Coins
+              
     .col-md-12
       .row.text-center
         .col-md-2.col-md-offset-1
