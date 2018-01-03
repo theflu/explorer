@@ -26,11 +26,11 @@
   "donatesymbol": "",
 
   // logo
-  "logo": "/images/logo.png",
+  "logo": "/images/logo-default.png",
 
   // favicon
-  "favicon": "public/favicon.ico",
-  "favpng": "/images/logo.png",
+  "favicon": "public/favicon-default.ico",
+  "favpng": "/images/logo-default.png",
 
   // Uses bootswatch themes (http://bootswatch.com/)
   // Valid options:
