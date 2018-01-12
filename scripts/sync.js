@@ -182,7 +182,11 @@ is_locked(function (exists) {
                       });
                     });              
                   } else if (mode == 'check') {
-                    db.update_tx_db(settings.coin, 1, stats.count, settings.check_timeout, function(){
+                    var start = 1;
+                    if (process.argv[4]) {
+                      start = parseInt(process.argv[4]);
+                    }
+                    db.update_tx_db(settings.coin, start, stats.count, settings.check_timeout, function(){
                       db.get_stats(settings.coin, function(nstats){
                         console.log('check complete (block: %s)', nstats.last);
                         exit();
