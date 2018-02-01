@@ -1,4 +1,5 @@
 var express = require('express')
+  , cors = require('cors')
   , path = require('path')
   , bitcoinapi = require('bitcoin-node-api')
   , favicon = require('static-favicon')
@@ -41,6 +42,9 @@ if (settings.heavy != true) {
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+app.use(cors({
+    origin: 'http://altexplorer.co'
+}));
 app.use(favicon(path.join(__dirname, settings.favicon)));
 app.use(logger('dev'));
 app.use(bodyParser.json());
